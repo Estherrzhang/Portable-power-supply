@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=NetC23_1 Pin=R35-1
+Added Pin To Net: NetName=NetC23_1 Pin=R36-2
+Added Member To Class: ClassName=Control Member=Component CN1 300S-20P
+Added Room: Name=Control
+Added Room: Name=VoltageRegulator
