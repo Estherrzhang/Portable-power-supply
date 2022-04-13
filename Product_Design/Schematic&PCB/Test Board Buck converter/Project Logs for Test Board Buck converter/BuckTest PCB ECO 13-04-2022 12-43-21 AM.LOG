@@ -1,0 +1,18 @@
+Added Component: Designator=CN?(CONN-TH_5P-P2.50_HX25003-5A)
+Add component (AddParameter): Name = "BOM_JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer"; Value = "HX(Zhejiang Yueqing Hongxing Elec)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer Part"; Value = "HX25003-5A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier Part"; Value = "C442302"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contributor"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spicePre"; Value = "C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spiceSymbolName"; Value = "HX25003-5A"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Vref_buck Pin=CN?-1
+Added Pin To Net: NetName=Vcom_buck Pin=CN?-2
+Added Pin To Net: NetName=AGND Pin=CN?-3
+Added Pin To Net: NetName=VBUS Pin=CN?-4
+Added Pin To Net: NetName=Output Pin=CN?-5
+Added Pin To Net: NetName=NetR6_2 Pin=U2-7
+Added Pin To Net: NetName=Vcom_buck Pin=U3-7
+Added Member To Class: ClassName=Buck converter Member=Component CN? HX25003-5A
+Added Room: Name=Buck converter

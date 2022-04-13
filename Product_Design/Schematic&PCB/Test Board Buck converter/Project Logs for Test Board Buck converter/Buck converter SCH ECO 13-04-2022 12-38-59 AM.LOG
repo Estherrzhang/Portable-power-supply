@@ -1,0 +1,3 @@
+Remove Pin=CN1-1 From Net=Vref_buck
+Remove Pin=CN1-2 From Net=Vcom_buck
+Remove Pin=CN1-5 From Net=Output

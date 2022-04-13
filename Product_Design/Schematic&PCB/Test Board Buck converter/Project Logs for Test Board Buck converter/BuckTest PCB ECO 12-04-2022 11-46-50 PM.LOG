@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=NetR6_2 Pin=U2-7
+Added Pin To Net: NetName=Vcom_buck Pin=U3-7
+Added Room: Name=Buck converter

@@ -1,0 +1,130 @@
+Removed Pin From Net: NetName=Vref_buck Pin=CN1-1
+Removed Pin From Net: NetName=Vcom_buck Pin=CN1-2
+Removed Pin From Net: NetName=AGND Pin=CN1-3
+Removed Pin From Net: NetName=Output Pin=CN1-4
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Added Component: Designator=C5(0805C)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "July-2002: Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Added Component: Designator=C6(0805C)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "July-2002: Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Added Component: Designator=C7(0805C)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "July-2002: Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Added Component: Designator=R1(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Component: Designator=R2(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2k"; VariantName = "[No Variations]"
+Added Component: Designator=R4(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2k"; VariantName = "[No Variations]"
+Added Component: Designator=R5(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Added Component: Designator=R6(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2k"; VariantName = "[No Variations]"
+Added Component: Designator=R7(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "5.1K"; VariantName = "[No Variations]"
+Added Component: Designator=R8(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "5.1K"; VariantName = "[No Variations]"
+Added Component: Designator=R9(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "5.1K"; VariantName = "[No Variations]"
+Added Component: Designator=R10(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "5.1K"; VariantName = "[No Variations]"
+Added Component: Designator=U5(SOP-8_L4.9-W3.9-P1.27-LS6.0-BL)
+Add component (AddParameter): Name = "BOM_JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer"; Value = "HGSEMI"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer Part"; Value = "ICL7660M/TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier Part"; Value = "C356724"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contributor"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spicePre"; Value = "U"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spiceSymbolName"; Value = "ICL7660M/TR"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VBUS Pin=C5-1
+Added Pin To Net: NetName=AGND Pin=C5-2
+Added Pin To Net: NetName=-5V Pin=C7-2
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=NetR2_2 Pin=R2-2
+Added Pin To Net: NetName=AGND Pin=R4-1
+Added Pin To Net: NetName=NetC3_2 Pin=R4-2
+Added Pin To Net: NetName=NetR1_2 Pin=R5-1
+Added Pin To Net: NetName=NetC3_2 Pin=R5-2
+Added Pin To Net: NetName=NetR2_2 Pin=R6-1
+Added Pin To Net: NetName=NetR6_2 Pin=R6-2
+Added Pin To Net: NetName=NetR7_1 Pin=R7-1
+Added Pin To Net: NetName=NetR7_2 Pin=R7-2
+Added Pin To Net: NetName=AGND Pin=R8-1
+Added Pin To Net: NetName=AGND Pin=R9-1
+Added Pin To Net: NetName=NetR7_1 Pin=R9-2
+Added Pin To Net: NetName=Vref_buck Pin=R10-2
+Added Pin To Net: NetName=NetR6_2 Pin=U2-7
+Added Pin To Net: NetName=VBUS Pin=U2-8
+Added Pin To Net: NetName=Vcom_buck Pin=U3-7
+Added Pin To Net: NetName=VBUS Pin=U3-8
+Added Pin To Net: NetName=VBUS Pin=U4-8
+Added Pin To Net: NetName=AGND Pin=U5-3
+Added Pin To Net: NetName=VBUS Pin=U5-8
+Added Pin To Net: NetName=NetC6_1 Pin=C6-1
+Added Pin To Net: NetName=NetC6_1 Pin=U5-2
+Added Net: Name=NetC6_1
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_2 Pin=U5-4
+Added Net: Name=NetC6_2
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=U5-5
+Added Net: Name=NetC7_1
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Pin To Net: NetName=NetR8_2 Pin=R10-1
+Added Pin To Net: NetName=NetR8_2 Pin=U2-3
+Added Net: Name=NetR8_2
+Added Member To Class: ClassName=Buck converter Member=Component C5 10uF
+Added Member To Class: ClassName=Buck converter Member=Component C6 10uF
+Added Member To Class: ClassName=Buck converter Member=Component C7 10uF
+Added Member To Class: ClassName=Buck converter Member=Component R1 1K
+Added Member To Class: ClassName=Buck converter Member=Component R2 2k
+Added Member To Class: ClassName=Buck converter Member=Component R4 2k
+Added Member To Class: ClassName=Buck converter Member=Component R5 1K
+Added Member To Class: ClassName=Buck converter Member=Component R6 2k
+Added Member To Class: ClassName=Buck converter Member=Component R7 5.1K
+Added Member To Class: ClassName=Buck converter Member=Component R8 5.1K
+Added Member To Class: ClassName=Buck converter Member=Component R9 5.1K
+Added Member To Class: ClassName=Buck converter Member=Component R10 5.1K
+Added Member To Class: ClassName=Buck converter Member=Component U5 ICL7660M/TR
+Added Room: Name=Buck converter

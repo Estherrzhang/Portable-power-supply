@@ -1,0 +1,11 @@
+Added Component: Designator=R?(0805)
+Add component (AddParameter): Name = "Reviewed by"; Value = "RM - 2018/08/05"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Suppler Part Number 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "12k"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC3_2 Pin=R?-1
+Added Pin To Net: NetName=NetC3_1 Pin=R?-2
+Added Pin To Net: NetName=NetR1_1 Pin=U2-7
+Added Pin To Net: NetName=NetR7_2 Pin=U3-7
+Added Member To Class: ClassName=Buck converter Member=Component R? 12k
+Added Room: Name=Buck converter
