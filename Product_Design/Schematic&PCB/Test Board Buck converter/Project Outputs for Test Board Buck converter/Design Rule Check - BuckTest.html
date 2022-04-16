@@ -1,0 +1,414 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://E:\Altium\AD21\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">16/04/2022</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:10:24 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc" class="file"><acronym title="D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc">D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">22</td></tr>
+</table>
+</td>
+</table><a name="IDLL3YEY25AEFFEQLMAIYLKLPTBEKNB1KLXH2ZWVCU4ZNWVOPZOG4I"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLGC0S4IEWXG3CXWR2MCZS5STULHGLW2R45Y3OJP2LYYV0IQGCMKD">Clearance Constraint (Gap=10mil) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZMKIRU0JLYDMMBQ2VV23SYOJKLWL4F5QS4SZL52UIM2DCNXLXWO">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOL3YFZXNUCBMHHV24JVATSHFNCZCDIHA1CXVAUOQJ5IWDWPDCZQE">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUZB1MJ50VOBEGPHKCXN33JSTDEDH3RHSDPOF20JX5AMUBUMDSKLP">Un-Connected Pin Constraint ( (All) )</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2VE3B2YORWHIBVST5QAE31O3YMYZCEIJBZ4CDBOBKGY11Z3O34HF">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWOZOEBJHPCW2N24COFTDKMY3DABRQQV3YJAHNCYWXZJG32K2ADP">Width Constraint (Min=10mil) (Max=20mil) (Preferred=20mil) (InNet('VBUS'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJKQEBDFCL4UOHUM0W2FXYIV52KZQLRDMFI3ULAMKBA4EVM3GOI0H">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGIKEG1SHAYRXBJY0SNA4GOB5FG0TTE3HMC2BCBB34QCPEQC23GCK">Width Constraint (Min=10mil) (Max=20mil) (Preferred=20mil) (InNet('-5V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLJDOZS144EBYIETFFAQ3HN35C5GVAYFEKDYGQCNJKPZKAWK3E3C">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4AN5UIFTIFR2OIVWULBTICCIBBSOOCHFAFGVSTJMRJYOAKIVCNVF">Hole Size Constraint (Min=22mil) (Max=40mil) (All)</a></td>
+<td class="column2">11</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHJDUOTZGNTC3JHFWLXGQTYVZ5FH34E4IWQJBCUOEP5QV4YNRNLDJ">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSLCYNNFT0FYJLXKV12ZNTRJIKNXZVFCK4ZGVDGFEHYBIBDGMRSRK">Minimum Solder Mask Sliver (Gap=1mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT0XT2ONRWJVLP5AEMD5FLEDRJOGIZP1ZVF11MT23LH3N2YU4I2C">Silk To Solder Mask (Clearance=1mil) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIIRJSWFXAGGJFOOSRKDYXM2QQICELWYSZQF3OBKL33NREJ5OUOWD">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDSZOUO3L0VJJTEELTQSA5SQDZCIUX02GOJWMGB4BEOW15C0HF4RJO">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4HAWDIVPNWOGHOJ3PBVPP4K0TELUOYJRBDEWQYJBEHUGX1K3ZN4C">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">22</td>
+</tr>
+</table><br><a name="IDLGC0S4IEWXG3CXWR2MCZS5STULHGLW2R45Y3OJP2LYYV0IQGCMKD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.987mil|Location2.X=1542.237mil|Location1.Y=256.829mil|Location2.Y=268.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1530.987mil|Location2.X=1542.237mil|Location1.Y=256.829mil|Location2.Y=268.079mil|Absolute=True">Clearance Constraint: (9.842mil &lt; 10mil) Between Pad USB1-1(1498.817mil,234.895mil) on Top Layer And Pad USB1-2(1524.407mil,234.895mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1607.759mil|Location2.X=1619.009mil|Location1.Y=256.829mil|Location2.Y=268.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1607.759mil|Location2.X=1619.009mil|Location1.Y=256.829mil|Location2.Y=268.079mil|Absolute=True">Clearance Constraint: (9.842mil &lt; 10mil) Between Pad USB1-4(1575.589mil,234.895mil) on Top Layer And Pad USB1-5(1601.179mil,234.895mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUZB1MJ50VOBEGPHKCXN33JSTDEDH3RHSDPOF20JX5AMUBUMDSKLP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Connected Pin Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2194.398mil|Location2.X=2276.823mil|Location1.Y=343.788mil|Location2.Y=426.212mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2194.398mil|Location2.X=2276.823mil|Location1.Y=343.788mil|Location2.Y=426.212mil|Absolute=True">Un-Connected Pin Constraint: Pad U4-5(2210.61mil,385mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2194.398mil|Location2.X=2276.823mil|Location1.Y=393.788mil|Location2.Y=476.212mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2194.398mil|Location2.X=2276.823mil|Location1.Y=393.788mil|Location2.Y=476.212mil|Absolute=True">Un-Connected Pin Constraint: Pad U4-6(2210.61mil,435mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2194.398mil|Location2.X=2276.823mil|Location1.Y=443.788mil|Location2.Y=526.212mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2194.398mil|Location2.X=2276.823mil|Location1.Y=443.788mil|Location2.Y=526.212mil|Absolute=True">Un-Connected Pin Constraint: Pad U4-7(2210.61mil,485mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1144.398mil|Location2.X=1226.822mil|Location1.Y=924.559mil|Location2.Y=1006.985mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1144.398mil|Location2.X=1226.822mil|Location1.Y=924.559mil|Location2.Y=1006.985mil|Absolute=True">Un-Connected Pin Constraint: Pad U5-1(1160.61mil,965.772mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.178mil|Location2.X=1015.602mil|Location1.Y=1024.56mil|Location2.Y=1106.985mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.178mil|Location2.X=1015.602mil|Location1.Y=1024.56mil|Location2.Y=1106.985mil|Absolute=True">Un-Connected Pin Constraint: Pad U5-6(949.39mil,1065.772mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.178mil|Location2.X=1015.602mil|Location1.Y=974.559mil|Location2.Y=1056.985mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=933.178mil|Location2.X=1015.602mil|Location1.Y=974.559mil|Location2.Y=1056.985mil|Absolute=True">Un-Connected Pin Constraint: Pad U5-7(949.39mil,1015.772mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.348mil|Location2.X=1581.466mil|Location1.Y=202.836mil|Location2.Y=266.954mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.348mil|Location2.X=1581.466mil|Location1.Y=202.836mil|Location2.Y=266.954mil|Absolute=True">Un-Connected Pin Constraint: Pad USB1-2(1524.407mil,234.895mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1542.939mil|Location2.X=1607.057mil|Location1.Y=202.836mil|Location2.Y=266.954mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1542.939mil|Location2.X=1607.057mil|Location1.Y=202.836mil|Location2.Y=266.954mil|Absolute=True">Un-Connected Pin Constraint: Pad USB1-3(1549.998mil,234.895mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1568.53mil|Location2.X=1632.648mil|Location1.Y=202.836mil|Location2.Y=266.954mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1568.53mil|Location2.X=1632.648mil|Location1.Y=202.836mil|Location2.Y=266.954mil|Absolute=True">Un-Connected Pin Constraint: Pad USB1-4(1575.589mil,234.895mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID4AN5UIFTIFR2OIVWULBTICCIBBSOOCHFAFGVSTJMRJYOAKIVCNVF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=22mil) (Max=40mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1105.871mil|Location2.Y=1150.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1105.871mil|Location2.Y=1150.429mil|Absolute=True">Hole Size Constraint: (43.308mil &gt; 40mil) Pad CN1-1(2000mil,1128.15mil) on Multi-Layer Actual Hole Size = 43.308mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1204.297mil|Location2.Y=1248.855mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1204.297mil|Location2.Y=1248.855mil|Absolute=True">Hole Size Constraint: (43.308mil &gt; 40mil) Pad CN1-2(2000mil,1226.576mil) on Multi-Layer Actual Hole Size = 43.308mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1302.721mil|Location2.Y=1347.279mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1302.721mil|Location2.Y=1347.279mil|Absolute=True">Hole Size Constraint: (43.308mil &gt; 40mil) Pad CN1-3(2000mil,1325mil) on Multi-Layer Actual Hole Size = 43.308mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1401.147mil|Location2.Y=1445.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1401.147mil|Location2.Y=1445.705mil|Absolute=True">Hole Size Constraint: (43.308mil &gt; 40mil) Pad CN1-4(2000mil,1423.426mil) on Multi-Layer Actual Hole Size = 43.308mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1499.571mil|Location2.Y=1544.129mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2002.721mil|Location2.X=2047.279mil|Location1.Y=1499.571mil|Location2.Y=1544.129mil|Absolute=True">Hole Size Constraint: (43.308mil &gt; 40mil) Pad CN1-5(2000mil,1521.85mil) on Multi-Layer Actual Hole Size = 43.308mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1686.575mil|Location2.X=1746.885mil|Location1.Y=84.951mil|Location2.Y=145.261mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1686.575mil|Location2.X=1746.885mil|Location1.Y=84.951mil|Location2.Y=145.261mil|Absolute=True">Hole Size Constraint: (59.06mil &gt; 40mil) Pad USB1-7(1691.73mil,115.106mil) on Multi-Layer Actual Slot Hole Width = 59.06mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1403.111mil|Location2.X=1463.421mil|Location1.Y=84.951mil|Location2.Y=145.261mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1403.111mil|Location2.X=1463.421mil|Location1.Y=84.951mil|Location2.Y=145.261mil|Absolute=True">Hole Size Constraint: (59.06mil &gt; 40mil) Pad USB1-8(1408.266mil,115.106mil) on Multi-Layer Actual Slot Hole Width = 59.06mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.469mil|Location2.X=1556.531mil|Location1.Y=613.47mil|Location2.Y=626.53mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1543.469mil|Location2.X=1556.531mil|Location1.Y=613.47mil|Location2.Y=626.53mil|Absolute=True">Hole Size Constraint: (11.811mil &lt; 22mil) Via (1525mil,620mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=288.47mil|Location2.X=301.531mil|Location1.Y=1613.469mil|Location2.Y=1626.531mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=288.47mil|Location2.X=301.531mil|Location1.Y=1613.469mil|Location2.Y=1626.531mil|Absolute=True">Hole Size Constraint: (11.811mil &lt; 22mil) Via (270mil,1620mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=618.47mil|Location2.X=631.531mil|Location1.Y=1653.469mil|Location2.Y=1666.531mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=618.47mil|Location2.X=631.531mil|Location1.Y=1653.469mil|Location2.Y=1666.531mil|Absolute=True">Hole Size Constraint: (11.811mil &lt; 22mil) Via (600mil,1660mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=833.47mil|Location2.X=846.53mil|Location1.Y=1451.84mil|Location2.Y=1464.9mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\school\Capstone\Product_Design\Schematic&amp;PCB\Test Board Buck converter\BuckTest.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=833.47mil|Location2.X=846.53mil|Location1.Y=1451.84mil|Location2.Y=1464.9mil|Absolute=True">Hole Size Constraint: (11.811mil &lt; 22mil) Via (815mil,1458.37mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

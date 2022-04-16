@@ -1,0 +1,79 @@
+Protel Design System Design Rule Check
+PCB File : D:\school\Capstone\Product_Design\Schematic&PCB\Test Board Buck converter\BuckTest.PcbDoc
+Date     : 16/04/2022
+Time     : 12:10:24 PM
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+   Violation between Clearance Constraint: (9.842mil < 10mil) Between Pad USB1-1(1498.817mil,234.895mil) on Top Layer And Pad USB1-2(1524.407mil,234.895mil) on Top Layer 
+   Violation between Clearance Constraint: (9.842mil < 10mil) Between Pad USB1-4(1575.589mil,234.895mil) on Top Layer And Pad USB1-5(1601.179mil,234.895mil) on Top Layer 
+Rule Violations :2
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Un-Connected Pin Constraint ( (All) )
+   Violation between Un-Connected Pin Constraint: Pad U4-5(2210.61mil,385mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad U4-6(2210.61mil,435mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad U4-7(2210.61mil,485mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad U5-1(1160.61mil,965.772mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad U5-6(949.39mil,1065.772mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad U5-7(949.39mil,1015.772mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad USB1-2(1524.407mil,234.895mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad USB1-3(1549.998mil,234.895mil) on Top Layer 
+   Violation between Un-Connected Pin Constraint: Pad USB1-4(1575.589mil,234.895mil) on Top Layer 
+Rule Violations :9
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=20mil) (Preferred=20mil) (InNet('VBUS'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=10mil) (Max=20mil) (Preferred=20mil) (InNet('-5V'))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=22mil) (Max=40mil) (All)
+   Violation between Hole Size Constraint: (43.308mil > 40mil) Pad CN1-1(2000mil,1128.15mil) on Multi-Layer Actual Hole Size = 43.308mil
+   Violation between Hole Size Constraint: (43.308mil > 40mil) Pad CN1-2(2000mil,1226.576mil) on Multi-Layer Actual Hole Size = 43.308mil
+   Violation between Hole Size Constraint: (43.308mil > 40mil) Pad CN1-3(2000mil,1325mil) on Multi-Layer Actual Hole Size = 43.308mil
+   Violation between Hole Size Constraint: (43.308mil > 40mil) Pad CN1-4(2000mil,1423.426mil) on Multi-Layer Actual Hole Size = 43.308mil
+   Violation between Hole Size Constraint: (43.308mil > 40mil) Pad CN1-5(2000mil,1521.85mil) on Multi-Layer Actual Hole Size = 43.308mil
+   Violation between Hole Size Constraint: (59.06mil > 40mil) Pad USB1-7(1691.73mil,115.106mil) on Multi-Layer Actual Slot Hole Width = 59.06mil
+   Violation between Hole Size Constraint: (59.06mil > 40mil) Pad USB1-8(1408.266mil,115.106mil) on Multi-Layer Actual Slot Hole Width = 59.06mil
+   Violation between Hole Size Constraint: (11.811mil < 22mil) Via (1525mil,620mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil
+   Violation between Hole Size Constraint: (11.811mil < 22mil) Via (270mil,1620mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil
+   Violation between Hole Size Constraint: (11.811mil < 22mil) Via (600mil,1660mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil
+   Violation between Hole Size Constraint: (11.811mil < 22mil) Via (815mil,1458.37mil) from Top Layer to Bottom Layer Actual Hole Size = 11.811mil
+Rule Violations :11
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=1mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=1mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 22
+Waived Violations : 0
+Time Elapsed        : 00:00:01
