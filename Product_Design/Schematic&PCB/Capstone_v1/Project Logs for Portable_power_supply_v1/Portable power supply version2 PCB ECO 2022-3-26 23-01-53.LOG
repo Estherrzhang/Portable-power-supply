@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=+3V3 Pin=L2-1
-Removed Pin From Net: NetName=+3V3 Pin=L2-2
-Removed Member From Class: ClassName=Control Member=L2
-Added Room: Name=Control
-Added Room: Name=Front(LDR)
-Added Room: Name=VoltageRegulator

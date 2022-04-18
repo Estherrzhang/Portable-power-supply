@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 19:36:40 On 2022/4/4
+
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Project [Portable_power_supply_v1.PrjPcb]
+   Generated File[Bill of Materials-Portable_power_supply_v1.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 19:36:44 On 2022/4/4
