@@ -1,0 +1,13 @@
+Added Component: Designator=CNT1(M3)
+Added Component: Designator=CNT2(M3)
+Added Pin To Net: NetName=VBUS Pin=CNT1-1
+Added Pin To Net: NetName=VBUS Pin=CNT1-1
+Added Pin To Net: NetName=VBUS Pin=CNT1-1
+Added Pin To Net: NetName=VBUS Pin=CNT1-1
+Added Pin To Net: NetName=GND Pin=CNT2-1
+Added Pin To Net: NetName=GND Pin=CNT2-1
+Added Pin To Net: NetName=GND Pin=CNT2-1
+Added Pin To Net: NetName=GND Pin=CNT2-1
+Added Member To Class: ClassName=Front(LDR) Member=Component CNT1 CST
+Added Member To Class: ClassName=Front(LDR) Member=Component CNT2 CST
+Added Room: Name=Front(LDR)
