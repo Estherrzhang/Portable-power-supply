@@ -1,0 +1,28 @@
+- Assessment Part: 
+	11am-12pm AEST , 3-4pm AEST, Academic Aessessment part 1/2
+- Arrival time : 10:00am ~ 10:50am AEST [8:00am ~ 8:50 CN]
+
+
+Things to do :
+- register
+- Pitch 
+
+Did you know/ Have you ever ..... The problem we are solving is ... for [company/sector/customer]
+	1. Collection chaos.[]
+	2. Latoborary power supply Frustration[huge]
+	3. Geeks, home latoborary [expensive]
+Users: 	students/ inidvidual users, geeks
+[WanghaoYu Xiang]
+
+problem we are sovling is : ..
+We do this by...
+portable power supply , ...... [embedded with USB protocol trigger], [reliable programmable C.V and C.C control mode], [supply 0~5A, 0~30V, with precision XX and ripple 
+within XX...]
+[Tiancheng Zang]
+
+This creates value for .... by ...
+[Fengxue Zhang]
+
+Friday: 	Slides refinment, pitch on slides, elevator pitch discussion/practice
+Sunday: 	pitch on slides discussion/ practice
+Tue: 	Warm-up session .
